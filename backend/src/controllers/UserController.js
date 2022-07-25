@@ -59,7 +59,7 @@ class UserController {
   };
 
   static register = async (req, res) => {
-    const { email, password, role } = req.body;
+    const { email, password, role, username, lastname, firstname } = req.body;
 
     try {
       // TODO validations (length, format...)
@@ -77,16 +77,19 @@ class UserController {
       }
 
       // Hash password
-      const hashedPassword = await models.user.hashPassword(password);
-
+      const hashpassword = await models.user.hashPassword(password);
+      console.log(hashpassword);
       const [result] = await models.user.insert({
         email,
-        hashedPassword,
+        hashpassword,
         role,
+        username,
+        firstname,
+        lastname,
       });
       const [[userCreated]] = await models.user.find(result.insertId);
 
-      delete userCreated.hashedPassword;
+      delete userCreated.hashpassword;
 
       return res.status(201).json(userCreated);
     } catch (err) {

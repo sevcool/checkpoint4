@@ -1,0 +1,20 @@
+.Navbar {
+  background-color: whitesmoke !important;
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  width: 100%;
+}
+
+.navbar_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}

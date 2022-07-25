@@ -10,6 +10,10 @@ class AbstractManager {
     ]);
   }
 
+  findOne() {
+    return this.connection.query(`select * from  ${this.table} LIMIT 1`);
+  }
+
   findAll() {
     return this.connection.query(`select * from  ${this.table}`);
   }
