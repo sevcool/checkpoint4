@@ -1,0 +1,31 @@
+.Contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.facebook {
+  margin: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+.insta {
+  margin: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+.git {
+  margin: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+.linkedin {
+  margin: 1rem;
+  height: 8rem;
+  width: 8rem;
+}
+
+.twitter {
+  margin: 1rem;
+  height: 8rem;
+  width: 8rem;
+}

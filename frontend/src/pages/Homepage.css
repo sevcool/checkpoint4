@@ -1,0 +1,32 @@
+.Homepage {
+  height: 100%;
+  width: 100%;
+}
+.Homepage-content {
+  display: flex;
+  margin-top: 7rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.Homepage-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.Presentation {
+  width: 80%;
+  text-align: center;
+}
+/* .Btn {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+}
+.btnaccueil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
