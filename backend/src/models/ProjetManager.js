@@ -15,15 +15,15 @@ class ProjetManager extends AbstractManager {
 
   insert(projet) {
     return this.connection.query(
-      `INSERT INTO ${ProjetManager.table} (name, description,) VALUES (?, ?)`,
-      [projet.name, projet.description]
+      `INSERT INTO ${ProjetManager.table} (title, image_id) VALUES (?, ?)`,
+      [projet.title, projet.image_id]
     );
   }
 
   update(projet) {
     return this.connection.query(
-      `UPDATE ${ProjetManager.table} SET name = ?, description = ?, WHERE id = ?`,
-      [projet.name, projet.description]
+      `UPDATE ${ProjetManager.table} SET title = ?, image_id = ?, WHERE id = ?`,
+      [projet.title, projet.image_id, projet.id]
     );
   }
 }

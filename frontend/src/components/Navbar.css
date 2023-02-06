@@ -1,20 +1,124 @@
-.Navbar {
-  background-color: whitesmoke !important;
+.navbar {
   display: flex;
-  flex-direction: column;
-  /* position: fixed; */
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 7%;
+  background-color: whitesmoke;
+  width: auto;
+}
+.bars-button {
+  display: none;
 }
 
-.navbar_links {
+.links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  list-style: none;
+  gap: 30px;
 }
-a {
-  list-style: none;
+.links a {
   text-decoration: none;
   color: black;
+  font-size: 28px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 10 20px;
+  position: relative;
+}
+.links a::after {
+  position: absolute;
+  content: "";
+
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4ca8af;
+  transition: all 0.8s ease;
+}
+.links a:hover {
+  color: #333;
+  z-index: 1;
+  transition: all 0.8s ease;
+}
+.links a:hover::after {
+  height: 80%;
+  z-index: -1;
+}
+@media only screen and (max-width: 981px) {
+  .navbar {
+    padding: 25px 3%;
+  }
+  .links a {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .links.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 70, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  .links.active a {
+    font-size: 40px;
+    color: white;
+    margin: 20px 0;
+  }
+  .links.active a:hover {
+    color: #333;
+    z-index: 1;
+  }
+  .bars-button {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50px;
+    height: 40px;
+    z-index: 4;
+
+    position: relative;
+  }
+  .bars-button a:hover {
+    color: #333;
+    z-index: 1;
+  }
+  .bars-button span {
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    transition: all 0.3s ease;
+  }
+  .bars-button.active span:nth-child(2) {
+    display: none;
+  }
+  .bars-button.active span:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+  .bars-button.active span:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  .logo {
+    pointer-events: none;
+  }
 }

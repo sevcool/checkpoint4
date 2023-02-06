@@ -1,11 +1,9 @@
 .swiper {
-  width: 800px;
-  height: 800px;
+  width: 1000px;
+  height: 1000px;
   position: absolute;
-  left: -5%;
-  top: 50%;
   margin-left: -100px;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .swiper-slide {
@@ -16,4 +14,23 @@
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+@media only screen and (max-width: 981px) {
+  .swiper {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .swiper {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 100px;
+  }
 }

@@ -1,4 +1,5 @@
-import "./RegisterUser.css";
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import { useReducer } from "react";
 import * as yup from "yup";
 import registerUserReducer, {

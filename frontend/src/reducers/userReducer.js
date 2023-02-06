@@ -2,9 +2,6 @@ const initialState = {
   id: null,
   email: "",
   role: "",
-  username: "",
-  lastname: "",
-  firstname: "",
 };
 
 const userReducer = (state, action) => {

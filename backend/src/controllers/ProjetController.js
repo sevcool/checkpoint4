@@ -2,7 +2,8 @@ const models = require("../models");
 
 class ProjetController {
   static browse = (req, res) => {
-    models.Projet.findAll()
+    models.projet
+      .findAll()
       .then(([rows]) => {
         res.send(rows);
       })
@@ -33,7 +34,7 @@ class ProjetController {
     const projet = req.body;
     projet.id = parseInt(req.params.id, 10);
 
-    models.product
+    models.projet
       .update(projet)
       .then(([result]) => {
         res.status(201).send({ ...projet, id: result.insertId });
@@ -45,8 +46,8 @@ class ProjetController {
   };
 
   static add = (req, res) => {
-    const projet = res.body;
-    models.product
+    const projet = req.body;
+    models.projet
       .insert(projet)
       .then(([result]) => {
         res.status(201).send({ ...projet, id: result.insertId });
@@ -58,7 +59,7 @@ class ProjetController {
   };
 
   static delete = (req, res) => {
-    models.product
+    models.projet
       .delete(res.params.id)
       .then(() => {
         res.sendStatus(204);

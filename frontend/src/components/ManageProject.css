@@ -1,0 +1,77 @@
+.Manage-Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  margin-top: 5rem;
+  font-size: 24px;
+}
+
+.AjoutProjet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  background: rgba(76, 168, 175, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+table {
+  width: 90%;
+
+  border-collapse: collapse;
+  border: 3px solid black;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+th,
+td {
+  border: 3px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+td img {
+  width: 50px;
+  height: 50px;
+}
+button.btnadd {
+  background-color: whitesmoke;
+  color: black;
+}
+button {
+  padding: 10px 20px;
+  background-color: #4ca8af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .Manage-Projects {
+    display: none;
+  }
+}

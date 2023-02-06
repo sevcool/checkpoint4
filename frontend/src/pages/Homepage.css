@@ -1,10 +1,14 @@
 .Homepage {
-  height: 100%;
-  width: 100%;
-}
-.Homepage-content {
   display: flex;
-  margin-top: 7rem;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Homepage-content {
+  margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -15,18 +19,36 @@
   justify-content: center;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  margin-bottom: 1rem;
 }
 .Presentation {
   width: 80%;
   text-align: center;
+  font-size: 26px;
 }
-/* .Btn {
-  height: 10rem;
-  width: 10rem;
+
+.App {
   display: flex;
+  text-align: center;
+  flex-direction: column;
 }
-.btnaccueil {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
+.sev {
+  border-radius: 50%;
+  border-radius: 20px;
+}
+.PresTitle {
+  text-align: center;
+}
+.Presentation {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.sev {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 1rem;
+}

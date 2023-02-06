@@ -12,12 +12,7 @@ router.get(
 );
 router.get("/logout", UserController.authorization, UserController.logout);
 router.get("/:id", UserController.read);
-router.put(
-  "/:id",
-  UserController.authorization,
-  // UserController.isSameId,
-  UserController.edit
-);
+router.put("/:id", UserController.edit);
 router.post("/register", UserController.register);
 router.post("/login", UserController.login);
 router.delete("/:id", UserController.delete);

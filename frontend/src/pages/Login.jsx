@@ -1,8 +1,12 @@
-import "@pages/Login.css";
-import Navbar from "@components/Navbar";
+/* eslint-disable no-alert */
+import "./Login.css";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line import/no-unresolved
 import axios from "@services/axios";
+// eslint-disable-next-line import/no-unresolved
+import Navbar from "@components/Navbar";
 import { userContext } from "../contexts/UserContext";
 
 export default function Login() {
@@ -46,32 +50,32 @@ export default function Login() {
       <Navbar />
       <div className="login">
         <section className="login-container">
-          <h1 className="login-title">Log in</h1>
+          <h1 className="login-title">Se connecter</h1>
           <form className="fields" onSubmit={handleSubmit}>
-            <label className="label" htmlFor="email">
+            <label htmlFor="email">
               Email:{" "}
               <input
                 className="login-input"
                 id="email"
-                placeholder="your email"
+                placeholder="votre email"
                 type="email"
                 value={userData.email}
                 onChange={handleInputChange}
               />
             </label>
-            <label className="label" htmlFor="password">
-              Password:{" "}
+            <label htmlFor="password">
+              Mot de passe:{" "}
               <input
                 className="login-input"
                 id="password"
-                placeholder="your password"
+                placeholder="mot de passe"
                 type="password"
                 value={userData.password}
                 onChange={handleInputChange}
               />
             </label>
             <button className="login-btn" type="submit">
-              Login
+              Connexion
             </button>
           </form>
         </section>

@@ -1,16 +1,14 @@
+/* eslint-disable import/no-unresolved */
 import "@pages/Admin.css";
 import Navbar from "@components/Navbar";
+
+import ManageProject from "@components/ManageProject";
 
 function Admin() {
   return (
     <div className="Admin">
-      <NaVBar />
-      <button type="button" className="btnaccueil">
-        Ajouter un projet
-      </button>
-      <button type="button" className="btnaccueil">
-        Supprimer un projet
-      </button>
+      <Navbar />
+      <ManageProject />
     </div>
   );
 }

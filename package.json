@@ -19,6 +19,7 @@
     "husky": "^7.0.0"
   },
   "dependencies": {
-    "dispatch": "^1.0.2"
+    "dispatch": "^1.0.2",
+    "file-saver": "^2.0.5"
   }
 }
